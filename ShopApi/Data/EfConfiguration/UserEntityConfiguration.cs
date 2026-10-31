@@ -29,5 +29,8 @@ public class UserEntityConfiguration
         .IsRequired()
         .HasMaxLength(200);
 
+        builder.Property(x => x.Username)
+            .IsRequired()
+            .HasMaxLength(10);
     }
 }
