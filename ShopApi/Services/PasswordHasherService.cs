@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Shop.Api.Services;
+namespace ShopApi.Services;
 
 public class PasswordHasherService : IPasswordHasherService
 {
