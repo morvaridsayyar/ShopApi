@@ -7,5 +7,5 @@ public class UserRole : BaseEntity
 
     public User User { get; set; } = null!;
     public Role Role { get; set; } = null!;
-
+    public object Roles { get; internal set; }
 }
