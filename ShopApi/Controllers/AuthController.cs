@@ -22,6 +22,8 @@ public class AuthController(ApplicationDbContext context,
         var normalizedUsername = request.Username.Trim().ToUpper();
 
         var user = await context.Users
+            .Include(x => x.UserRoles)
+            .ThenInclude(x => x.Roles)
             .FirstOrDefaultAsync(x => x.Username == normalizedUsername);
 
         var errorMessage = "نام کاربری  یا کلمه عبور صحیح نمی باشد";

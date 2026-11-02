@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShopApi.Constants;
@@ -10,6 +11,7 @@ using System.Data;
 
 namespace ShopApi.Controllers;
 
+[Authorize(Roles = "ADMIN")]
 [Route("api/[controller]")]
 [ApiController]
 public class SlidersController(ApplicationDbContext context,
