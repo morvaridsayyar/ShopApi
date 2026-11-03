@@ -32,5 +32,9 @@ public class UserEntityConfiguration
         builder.Property(x => x.Username)
             .IsRequired()
             .HasMaxLength(10);
+
+        builder.HasMany(x => x.ProductComments)
+          .WithOne(x => x.User)
+          .HasForeignKey(x => x.UserId);
     }
 }

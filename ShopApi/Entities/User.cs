@@ -8,4 +8,5 @@ public class User : BaseEntity
     public string Username { get; set; } = null!;
     public string PasswordHash { get; set; } = null!;
     public List<UserRole> UserRoles { get; set; } = null!;
+    public List<ProductComment> ProductComments { get; set; } = null!;
 }

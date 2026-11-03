@@ -7,4 +7,5 @@ public class Product : BaseEntity
     public long Price { get; set; }
     public ProductCategory Category { get; set; } = null!;
     public List<ProductImage> Images { get; set; } = null!;
+    public List<ProductComment> Comments { get; set; } = null!;
 }
