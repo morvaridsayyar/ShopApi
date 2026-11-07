@@ -8,4 +8,5 @@ public class Product : BaseEntity
     public ProductCategory Category { get; set; } = null!;
     public List<ProductImage> Images { get; set; } = null!;
     public List<ProductComment> Comments { get; set; } = null!;
+    public List<ShoppingCartItem> ShoppingCartItems { get; set; } = null!;
 }

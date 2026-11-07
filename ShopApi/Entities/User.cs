@@ -9,4 +9,6 @@ public class User : BaseEntity
     public string PasswordHash { get; set; } = null!;
     public List<UserRole> UserRoles { get; set; } = null!;
     public List<ProductComment> ProductComments { get; set; } = null!;
+    public List<ShoppingCart> ShoppingCarts { get; set; } = null!;
+    public List<UserAddress> UserAddresses { get; set; } = null!;
 }
