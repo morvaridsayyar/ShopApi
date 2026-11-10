@@ -10,10 +10,10 @@ public class ShoppingCartItemEntityConfiguration
     {
         builder.ToTable("ShoppingCartItems");
         builder.HasOne(x => x.ShoppingCart)
-            .WithMany(x => x.ShoppingCartItems)
+            .WithMany(x => x.Items)
             .HasForeignKey(x => x.ShoppingCartId);
         builder.HasOne(x => x.Product)
-            .WithMany(x => x.ShoppingCartItems)
+            .WithMany(x => x.Items)
             .HasForeignKey(x => x.ProductId);
     }
 }

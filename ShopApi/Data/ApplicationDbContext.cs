@@ -20,6 +20,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<ProductImage> ProductImages { get; set; }
     public DbSet<Slider> Sliders { get; set; }
     public DbSet<ProductComment> ProductComments { get; set; }
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
